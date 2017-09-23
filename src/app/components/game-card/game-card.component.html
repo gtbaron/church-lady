@@ -1,19 +1,13 @@
 <div id="game-card">
   <table>
-    <tr>
-      <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-    </tr>
-    <tr>
-      <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-    </tr>
-    <tr>
-      <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-    </tr>
-    <tr>
-      <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-    </tr>
-    <tr>
-      <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-    </tr>
+    <ng-template let-group ngFor [ngForOf]="squares">
+      <tr>
+        <td [class.center]="square.name === 'CENTER'"
+            [class.material-icons]="square.name === 'CENTER'"
+            *ngFor="let square of group.names">
+              {{square.name === 'CENTER' ? 'star_border' : square.name}}
+        </td>
+      </tr>
+    </ng-template>
   </table>
 </div>

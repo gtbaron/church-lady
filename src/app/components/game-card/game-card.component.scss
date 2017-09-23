@@ -4,8 +4,8 @@
   padding: 25px;
 
   table {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -13,8 +13,21 @@
     border-collapse: collapse;
 
     td {
+      padding: 0;
+      width: 90px;
+      height: 90px;
       background-color: $white;
       border: 2px solid $gray;
+
+    }
+
+    & td.center {
+      color: $blue;
+      background-color: $white;
+      border: none;
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 90px;
     }
   }
 }
@@ -26,6 +39,18 @@
     table {
       width: 375px;
       height: 375px;
+
+      td {
+        width: 75px;
+        height: 75px;
+        font-size: 16px;
+      }
+
+      & td.center {
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 75px;
+      }
     }
   }
 }
@@ -35,8 +60,21 @@
     padding: 15px;
 
     table {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
+
+      td {
+        min-width: 60px;
+        max-width: 60px;
+        height: 60px;
+        font-size: 10px;
+      }
+
+      & td.center {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 60px;
+      }
     }
   }
 }
