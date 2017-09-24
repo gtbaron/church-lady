@@ -53,6 +53,6 @@ describe('GameCardComponent', () => {
     ];
     component.squares = squares;
     fixture.detectChanges();
-    expect(app.querySelectorAll('.game-square').length).toBe(25);
+    expect(app.querySelectorAll('p').length).toBe(25);
   });
 });

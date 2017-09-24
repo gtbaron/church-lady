@@ -1,5 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {GameCardComponent} from "./components/game-card/game-card.component";
+import {SquareComponent} from "./components/square/square.component";
 describe('AppComponent', () => {
   let fixture;
   let app;
@@ -8,7 +10,9 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        GameCardComponent,
+        SquareComponent
       ],
     }).compileComponents();
   }));

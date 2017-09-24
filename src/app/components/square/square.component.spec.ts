@@ -26,10 +26,12 @@ describe('SquareComponent', () => {
   });
 
   it('should display a td with the appropriate class for each square', () => {
-    expect(app.querySelector('.game-square')).toBeTruthy();
+    component.name = 'hero';
+    fixture.detectChanges();
+    expect(app.querySelector('p').innerHTML).toBeTruthy('hero');
   });
 
-  fit('should display the center star when given the appropriate name', () => {
+  it('should display the center star when given the appropriate name', () => {
     component.name = 'CENTER';
     fixture.detectChanges();
     expect(app.querySelector('.center').innerHTML).toContain('star_border');
