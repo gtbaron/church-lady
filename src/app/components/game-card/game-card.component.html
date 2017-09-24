@@ -2,10 +2,8 @@
   <table>
     <ng-template let-group ngFor [ngForOf]="squares">
       <tr>
-        <td [class.center]="square.name === 'CENTER'"
-            [class.material-icons]="square.name === 'CENTER'"
-            *ngFor="let square of group.names">
-              {{square.name === 'CENTER' ? 'star_border' : square.name}}
+        <td *ngFor="let square of group.names">
+          <app-square [name]="square.name"></app-square>
         </td>
       </tr>
     </ng-template>
