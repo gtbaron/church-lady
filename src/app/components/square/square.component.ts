@@ -16,8 +16,9 @@ export class SquareComponent implements OnInit {
   }
 
   handleClick() {
-    console.log(this.name);
-    alert(this.name);
+    if ('CENTER' !== this.name) {
+      alert(this.name);
+    }
   }
 
 }
